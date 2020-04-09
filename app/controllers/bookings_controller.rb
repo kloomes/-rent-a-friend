@@ -10,6 +10,12 @@ class BookingsController < ApplicationController
   end
 
   def create
+    @booking = Booking.new(booking_params)
+    if Booking.save
+      redirect_to
+    else
+      render :new
+    end
   end
 
   def edit
@@ -19,5 +25,11 @@ class BookingsController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def booking_params
+    params.require(:booking).permit(:time, :date, :location)
   end
 end

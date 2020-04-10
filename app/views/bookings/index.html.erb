@@ -1,4 +1,5 @@
 <h1>My Bookings</h1>
 <% @bookings.each do |booking| %>
 <h3><%= booking.friend.name %></h3>
+<%= link_to "View Booking", booking_path(booking.id)  %>
 <% end %>

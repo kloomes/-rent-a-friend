@@ -13,8 +13,11 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    if Booking.save
-      redirect_to user_bookings_path
+    @friend = Friend.find(params[:friend_id])
+    @booking[:user_id] = current_user.id
+    @booking[:friend_id] = @friend.id
+    if @booking.save
+      redirect_to friend_bookings_path(@friend)
     else
       render :new
     end

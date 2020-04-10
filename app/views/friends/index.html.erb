@@ -1,4 +1,4 @@
 <h1>Friends Index</h1>
 <% @friends.each do |friend| %>
-<%= link_to friend.name, friend_path(friend.id) %>
+<p><%= link_to friend.name, friend_path(friend.id) %></p>
 <% end %>

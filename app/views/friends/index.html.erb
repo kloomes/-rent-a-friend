@@ -1,4 +1,10 @@
 <h1>Friends Index</h1>
 <% @friends.each do |friend| %>
-<p><%= link_to friend.name, friend_path(friend.id) %></p>
+<div class="card">
+  <p><%= link_to friend.name, friend_path(friend.id) %></p>
+  <p><%= friend.location %></p>
+  <p><%= friend.interest %></p>
+  <p>£<%= friend.price %></p>
+  <p><%= friend.bio %></p>
+</div>
 <% end %>

@@ -1,2 +1,6 @@
-<h1><%= @friend.name %> Show Page</h1>
+<h1><%= @friend.name %></h1>
+<p><%= @friend.location %></p>
+<p><%= @friend.interest %></p>
+<p>£<%= @friend.price %></p>
+<p><%= @friend.bio %></p>
 <%= link_to "Book me", new_friend_booking_path(@friend.id) %>

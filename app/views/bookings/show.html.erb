@@ -1,2 +1,6 @@
 <h1>Booking Show</h1>
+<p><%= @booking.friend.name %></p>
+<p><%= @booking.date %></p>
+<p><%= @booking.time %></p>
+<p><%= @booking.location %></p>
 <%= link_to "Delete this booking", booking_path(@booking.id), method: :delete, data: { confirm: 'Are you sure?' } %>

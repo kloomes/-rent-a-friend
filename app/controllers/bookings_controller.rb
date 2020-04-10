@@ -8,7 +8,7 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
-    @user = current_user
+    @friend = Friend.find(params[:friend_id])
   end
 
   def create

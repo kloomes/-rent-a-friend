@@ -1,6 +1,7 @@
 <h1>New Booking</h1>
-<%= simple_form_for [@user, @booking] do |f| %>
+<%= simple_form_for [@friend, @booking] do |f| %>
 <%= f.input :location %>
 <%= f.input :date %>
 <%= f.input :time %>
+<%= f.submit %>
 <% end %>

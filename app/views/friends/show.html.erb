@@ -1,2 +1,2 @@
 <h1><%= @friend.name %> Show Page</h1>
-<%= link_to "Book Me", new_user_booking_path(current_user) %>
+<%= link_to "Book me", new_friend_booking_path(@friend.id) %>
